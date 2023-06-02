@@ -5,6 +5,7 @@ import { PhotoFrame } from './PhotoFrame';
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [photo, setPhoto] = useState({});
+  const BASE_URL = "https://jsonplaceholder.typicode.com/photos/";
   async function fetchApi(id){
     setIsLoading(true);
     const response = await fetch(BASE_URL+id);
